@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+article{
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 20px;
+    width: 60vw;
+}
+
+.img-container{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 30px;
+    border: 3px solid #202021;
+}
+
+.img-container img {
+     width: 100%;
+     transform: rotate(-27deg);
+}
+
+section.presentacion h1,
+section.presentacion p{
+    text-align: center;
+}
+
+h1{
+    font-size: 30px;
+    margin-bottom: 2%;
+}
+
+.presentacion p{
+  text-transform: uppercase;
+  margin-bottom: 35%;
+}
+
+.presentacion ul{
+    margin-bottom: 15%;
+}
+.presentacion ul li{
+    list-style: none;
+    line-height: 1.5;
+}
+
+.presentacion ul a{
+    text-decoration: none;
+    color: #202021;
+}
+
+.presentacion ul a:hover,
+.presentacion ul a:focus{
+    color: #bca297;
+}
+
+.sobremi{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.col2 h2{
+    text-decoration: underline;
+    text-decoration-color: #202021;
+
+}
+
+.col2 p{
+    font-size: 0.98em;
+}
+
+.col1, .col2{
+    padding: 40px;
+}
+
+.col2{
+    background-color: #f8f5f5;
+}
+
+/*ESTILO PARA LA FN JS*/
+#container{
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 25px;
+    box-shadow: inset 4px 4px 6px #cecece,
+    inset -4px -4px 6px #fff;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    transform: scale(.7);
+    background-color: #454546;
+    border-radius: 25px;
+    box-shadow: 3px 3px 8px #c4c4c4,  -3px -3px 8px #fff;
+}
+
+#container.active .toggle{
+    left: 28px;
+}
+article.active{
+    background-color: #353535;
+    color: #f8f5f5;
+}
+article.active .img-container{
+    border: 3px solid #cecece;
+}
+article.active h1,
+article.active .presentacion p{
+    color: #fff;
+}
+article.active a{
+    color: #f8f5f5;
+}
+article.active a:hover{
+    color: #d5bdaf;
+}
+article.active .col2{
+    background-color: #202021;
+}
+
+article.active .col2 h2{
+    text-decoration-color: #f8f5f5;
+}
+
+
+
+@media screen and (max-width:425px){
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90vh;
+    }
+    .img-container{
+        margin-left: 20%;
+    }
+    .col1, .col2{
+        padding: 30px;
+    }
+}
